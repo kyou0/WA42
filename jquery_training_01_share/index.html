@@ -72,33 +72,59 @@
         // each - 指定した要素リストを順番に選択して実行する for文
         // 要素がクラス target を持っているかを確認し、持っていれば背景色を変更する
 
+        var $li = $("li");
+        $li.each(function (i) {
+            // console.log(i);
+            // console.log($(this).text());
+            if ($(this).hasClass("target")){
+                $(this).css("background","blue");
+        }
+        });
+
         /**
          * ノードを操作する
          */
         // append - 指定した要素の一番最後に子要素を追加する
         // 文字列にHTMLタグを渡すことも可能です
 
+        $("ul").append("<li>追加したリストです</li>");
+
         // before - 指定した要素の前に要素を追加する
         // 文字列にHTMLタグを渡すことも可能です
+
+        $("h1").before("<p>追加しました</p>");
 
         // after - 指定した要素の後に要素を追加する
         // 文字列にHTMLタグを渡すことも可能です
 
+        $("h1").after("<li>追加しました</li>");
+
         // remove - 指定した要素を削除する
+
+        // $("#wrapper").remove();
 
         // empty - 指定した要素の中を空にする
 
+        // $("#wrapper").empty();
+
         // text - 指定した要素の中の文字列を取得・変更する
+
+        // console.log($("h1").text());
+
+        // $("h1").text("JQueryの練習");
 
         /* 文字列をtextで変更する */
 
         // html - 指定した要素の中のHTMLを取得・変更する
 
+        $("p").html("<a href='http://googole.com'<a/>");
 
         /**
          * 属性を操作・取得する
          */
         // addClass - クラスを追加する
+
+        $("h1").addClass("red");
 
         // removeClass - クラスを削除する
 
