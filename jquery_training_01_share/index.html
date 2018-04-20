@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>jQueryの練習- DOM操作 -</title>
+    <script type="text/javascript" src="js/jquery-1.12.3.min.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .red {
+            color: red;
+        }
+        .hide {
+            opacity: 0;
+        }
+
+    </style>
+</head>
+<body>
+<div id="wrapper" class="page">
+
+    <h1>JavaScriptの練習</h1>
+
+    <p><a id="linkTarget" href="http://yahoo.co.jp">Yahoo!</a></p>
+
+    <ul>
+        <li>リスト項目1</li>
+        <li class="target">リスト項目2</li>
+        <li>リスト項目3</li>
+        <li class="target">リスト項目4</li>
+    </ul>
+
+    <button id="submit">リストを追加</button>
+
+    <div id="placeHolder"></div>
+    <script>
+
+
+        /**
+         * ノードを取得する
+         */
+
+        // find - 指定した要素の子要素を検索して取得する
+        // ulの子要素である、.targetを持つ要素を取得する
+
+        // parent - 指定した要素の親要素を取得する
+        // h1の親要素を取得して親要素の背景を操作する
+
+
+        // prev - 指定した要素の前にある要素を取得する
+        // ulの前の要素を取得してその要素の背景を操作する
+
+        // next - 指定した要素の後にある要素を取得する
+        // ulの後の要素を取得してその要素の背景を操作する
+
+        // first - 指定した要素リストのうち、一番最初の要素を取得する
+
+        // each - 指定した要素リストを順番に選択して実行する for文
+        // 要素がクラス target を持っているかを確認し、持っていれば背景色を変更する
+
+        /**
+         * ノードを操作する
+         */
+        // append - 指定した要素の一番最後に子要素を追加する
+        // 文字列にHTMLタグを渡すことも可能です
+
+        // before - 指定した要素の前に要素を追加する
+        // 文字列にHTMLタグを渡すことも可能です
+
+        // after - 指定した要素の後に要素を追加する
+        // 文字列にHTMLタグを渡すことも可能です
+
+        // remove - 指定した要素を削除する
+
+        // empty - 指定した要素の中を空にする
+
+        // text - 指定した要素の中の文字列を取得・変更する
+
+        /* 文字列をtextで変更する */
+
+        // html - 指定した要素の中のHTMLを取得・変更する
+
+
+        /**
+         * 属性を操作・取得する
+         */
+        // addClass - クラスを追加する
+
+        // removeClass - クラスを削除する
+
+        // attr - 属性を取得・変更する
+
+        // hrefのリンク先を変更する
+
+        // hasClass - 引数にしていしたクラスが設定されているか確認する
+        // css - スタイルを変更する
+        // h1のスタイルを変更する
+
+
+    </script>
+</div>
+</body>
+</html>
