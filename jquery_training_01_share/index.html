@@ -42,22 +42,33 @@
         // find - 指定した要素の子要素を検索して取得する
         // ulの子要素である、.targetを持つ要素を取得する
 
-        var 　$ul = $("ul");
-        var $target = $ul.find(".target");
-        console.log($target);
+        // var 　$ul = $("ul");
+        // var $target = $ul.find(".target");
+        // console.log($target);
 
         // parent - 指定した要素の親要素を取得する
         // h1の親要素を取得して親要素の背景を操作する
 
+        // var $h1 = $("h1");
+        // var $wrapper = $h1.parent();
+        // $wrapper.css("background","#51ffd5");
 
         // prev - 指定した要素の前にある要素を取得する
         // ulの前の要素を取得してその要素の背景を操作する
 
+        var $p = $("ul").prev();
+        $p.css("background", "#ffaaa3");
+
         // next - 指定した要素の後にある要素を取得する
         // ulの後の要素を取得してその要素の背景を操作する
 
+        var $button = $("ul").next();
+        $button.css("background","#bc8bff");
+
         // first - 指定した要素リストのうち、一番最初の要素を取得する
 
+        var $li = $("li").first();
+        $li.css("background", "#99c0ff");
         // each - 指定した要素リストを順番に選択して実行する for文
         // 要素がクラス target を持っているかを確認し、持っていれば背景色を変更する
 
