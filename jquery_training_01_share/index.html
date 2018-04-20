@@ -117,28 +117,33 @@
 
         // html - 指定した要素の中のHTMLを取得・変更する
 
-        $("p").html("<a href='http://googole.com'<a/>");
+        // $("p").html("<a href='http://googole.com'<a/>");
 
         /**
          * 属性を操作・取得する
          */
         // addClass - クラスを追加する
 
-        $("h1").addClass("red");
+        // $("h1").addClass("red");
 
         // removeClass - クラスを削除する
 
-        $("#wrapper").removeClass("page");
+        // $("#wrapper").removeClass("page");
 
         // attr - 属性を取得・変更する
 
-        $("#linkTarget").attr("href", "http://googole.com");
+        // $("#linkTarget").attr("href", "http://googole.com");
 
         // hrefのリンク先を変更する
 
         // hasClass - 引数にしていしたクラスが設定されているか確認する
         // css - スタイルを変更する
         // h1のスタイルを変更する
+
+
+        $("#submit").click(function (e) {
+            $("ul").append("<li>リストを追加します</li>");
+        });
 
 
     </script>
