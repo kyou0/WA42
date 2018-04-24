@@ -1,6 +1,8 @@
+import birthdayreminder.GirlFriend;
+
 public class birthdayReminderkai {
     public static void main(String[] args) {
-//        GirlFriend girl = new GirlFriend("まゆみ", 1989, 1,5);
+//        birthdayreminder.GirlFriend girl = new birthdayreminder.GirlFriend("まゆみ", 1989, 1,5);
         GirlFriend[] girls = {
                 new GirlFriend("まゆみ", 1988, 1, 5),
                 new GirlFriend("さちこ", 1993, 5, 15),

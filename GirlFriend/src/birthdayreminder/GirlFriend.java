@@ -1,3 +1,5 @@
+package birthdayreminder;
+
 /**
  * ガールフレンドを表すクラス。
  */
