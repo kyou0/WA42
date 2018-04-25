@@ -14,6 +14,11 @@ public class birthdayReminderkai {
                 new GirlFriend("りえ", 1987, 12, 23)
         };
 
+        StringBuffer respect = new StringBuffer("ちゃんが");
+        StringBuffer nameBirthday = new StringBuffer("日に誕生日です。");
+        StringBuffer messege = new StringBuffer("ちゃんが");
+
+
         System.out.println("クラスの確認2:誕生日リマインダ");
 
         for (int Month = 1; Month < 12; Month++) {
@@ -24,7 +29,7 @@ public class birthdayReminderkai {
 
             for (GirlFriend girl : girls) {
                 if (Month == girl.getBirthMonth()) {
-                    System.out.println(girl.getName() + "ちゃんが" + girl.getBirthDay() + "日に誕生日です。" + girl.getAge() + "歳になります。メッセージを送りましょう!");
+                    System.out.println(girl.getName() + respect + girl.getBirthDay() + nameBirthday + girl.getAge() + messege);
                     flg = false;
                 }
             }
