@@ -12,15 +12,18 @@ public class birthdayReminderkai {
                 new GirlFriend("りえ", 1987, 12, 23)
         };
 
-        boolean flg = true;
-
         System.out.println("クラスの確認2:誕生日リマインダ");
+
         for (int Month = 1; Month < 12; Month++) {
+
+            boolean flg = false;
+
             System.out.println(Month + "月");
+
             for (GirlFriend girl : girls) {
                 if (Month == girl.getBirthMonth()) {
                     System.out.println(girl.getName() + "ちゃんが" + girl.getBirthDay() + "日に誕生日です。" + girl.getAge() + "歳になります。メッセージを送りましょう!");
-                    flg = false;
+                    flg = true;
                 }
             }
             if (!flg) {
