@@ -1,3 +1,5 @@
+package birthdayreminder;
+
 import birthdayreminder.GirlFriend;
 
 public class birthdayReminderkai {
@@ -16,17 +18,17 @@ public class birthdayReminderkai {
 
         for (int Month = 1; Month < 12; Month++) {
 
-            boolean flg = false;
+            boolean flg = true;
 
             System.out.println(Month + "月");
 
             for (GirlFriend girl : girls) {
                 if (Month == girl.getBirthMonth()) {
                     System.out.println(girl.getName() + "ちゃんが" + girl.getBirthDay() + "日に誕生日です。" + girl.getAge() + "歳になります。メッセージを送りましょう!");
-                    flg = true;
+                    flg = false;
                 }
             }
-            if (!flg) {
+            if (flg) {
                 System.out.println("誕生日を迎える女性はいません。安心してください。");
             }
         }

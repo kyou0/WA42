@@ -1,3 +1,5 @@
+package birthdayreminder;
+
 import birthdayreminder.GirlFriend;
 
 public class birthdayReminder {
