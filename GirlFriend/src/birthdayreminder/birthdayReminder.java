@@ -16,7 +16,7 @@ public class birthdayReminder {
 
         StringBuffer respect = new StringBuffer("ちゃんが");
         StringBuffer nameBirthday = new StringBuffer("日に誕生日です。");
-        StringBuffer messege = new StringBuffer("ちゃんが");
+        StringBuffer messege = new StringBuffer("歳になります。メッセージを送りましょう。");
 
         System.out.println("クラスの確認2:誕生日リマインダ");
         for (int Month = 1; Month < 12; Month++) {
