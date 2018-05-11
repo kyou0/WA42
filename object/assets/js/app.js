@@ -35,9 +35,19 @@ var cart = {
         console.log("item", item);
         console.log("quantity", quantity);
 
-        item.quantity = quantity;
+        var _item;
 
-        this.items.push(item);
+        //既にカートに商品が登録されているか確認
+        _item = this.getItem(item.id);
+
+        //もし、itemがundefinedなら雨品を追加する
+        if (_item === undefined) {
+            //商品情報をコピーして、quanittyを追加する
+            // item.quantity = quantity;←これは間違い
+            _item = Object.assign({},item, {quantity: quantity});
+
+            this.items.push(_item);
+        }
     },
     //カートの商品を削除する
     remove: function () {
@@ -54,5 +64,11 @@ var cart = {
     //合計数を計算する
     calcTotalQuantity: function () {
 
+    },
+    //商品を取得する
+    getItem: function () {
+        return this.items.find(function (item) {
+            return item.id === id
+        });
     }
 };
