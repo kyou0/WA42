@@ -1,12 +1,108 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head>
-    <meta charset="utf-8">
-    <title>JavaScriptで買い物かご</title>
-  </head>
-  <body>
-    <h1>JavaScriptで買い物かご</h1>
+<head>
+  <meta charset="utf-8">
+  <title>JavaScriptで買い物かご</title>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/materialize/css/materialize.min.css">
+  <style>
+    .price, .total {
+      text-align: right;
+      font-size: 40px;
+    }
 
-    <script src="assets/js/app.js"></script>
-  </body>
+    input[type="number"] {
+      width: 30px;
+    }
+
+    .item img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .card-image {
+      width: 230px;
+    }
+
+    .total-quantity {
+      font-size: 15px;
+    }
+
+    .main-content {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <div class="nav-wrapper">
+        <a class="brand-logo"><i class="material-icons left">shopping_cart</i>JavaScriptでカートを実装</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container main-content">
+
+    <div class="row">
+      <div id="items" class="col m7">
+
+        <div class="item card horizontal">
+          <div class="card-image">
+            <img src="http://lorempixel.com/230/230/nature/6">
+          </div>
+          <div class="card-stacked">
+            <div class="card-content">
+              <p>商品名</p>
+              <p class="price"><small>¥</small>5,600</p>
+            </div>
+            <div class="card-action right-align">
+              <button href="javascript: void(0);" data-item-index="0" class="btn js-add-to-cart">カートに入れる</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="cart" class="col m5">
+        <div class="card">
+          <table class="bordered">
+            <tr>
+              <th class="center-align">商品名</th>
+              <th class="center-align">数量</th>
+              <th class="center-align">合計金額</th>
+              <th class="center-align">削除</th>
+            </tr>
+            <tbody id="cart-items">
+              <tr>
+                <td>商品名が入ります</td>
+                <td><input datalist="0" type="number" class="js-change-quantity" size="2">個</td>
+                <td class="right-align">¥60,000</td>
+                <td class="center-align"><button data-item-index="0" class="btn red js-remove-item">削除</button></td>
+              </tr>
+            </tbody>
+            <tr>
+              <td>合計</td>
+              <td colspan="3" class="total right-align">
+                <small class="total-quantity">11点</small>
+                <small>¥</small><span class="total-price">50,000</span>
+              </td>
+            </tr>
+          </table>
+          <div class="card-action center-align">
+            <button class="btn">購入する</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="assets/vendor/jquery-1.12.3.js"></script>
+  <script src="assets/vendor/materialize/js/materialize.min.js"></script>
+  <script src="assets/vendor/underscore-min.js"></script>
+  <script src="assets/js/app2.js"></script>
+</body>
 </html>
