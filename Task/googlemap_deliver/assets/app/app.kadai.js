@@ -36,43 +36,41 @@
   });
 
   // ボタンに対応する位置を取得して地図を更新する
-  document.getElementById('station-btn').addEventListener('click', function (event) {
-    const data = event.target.getAttribute('data-location')
+  $('#station').on('click', function (event) {
+    var data = event.target.getAttribute('data-location')
     map.setCenter(new google.maps.LatLng(locations[data]))
     marker.setPosition(new google.maps.LatLng(locations[data]))
   })
 
-  document.getElementById('my-locate-btn').addEventListener('click', function () {
+  $('#locate').on('click', function () {
     navigator.geolocation.getCurrentPosition(
       function (position) {
-        const myLocate = {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude
-        }
-        map.setCenter(new google.maps.LatLng(myLocate))
-        marker.setPosition(new google.maps.LatLng(myLocate))
+        map.setCenter(new google.maps.LatLng(position.coords.latitude, position.coords.longitude))
+        marker.setPosition(new google.maps.LatLng(position.coords.latitude, position.coords.longitude))
       })
   })
-  
+
   // GeoCodeで位置を取得し、地図を更新する
-  document.getElementById('search-btn').addEventListener('click', function () {
-    const address = document.getElementById('search-input').value
-    searchAddress(address)
-  })
-  
-  function searchAddress (address) {
-    const geocoder = new google.maps.Geocoder()
-    geocoder.geocode({'address': address}, function (result, status) {
-      if (status === google.maps.GeocoderStatus.OK) {
-        const searchLocate = {
-          lat: result[0].geometry.location.lat(),
-          lng: result[0].geometry.location.lng()
-        }
-        map.setCenter(new google.maps.LatLng(searchLocate))
-        marker.setPosition(new google.maps.LatLng(searchLocate))
-      } else {
-        console.log(status)
-      }
+    $('#search').on('click', function() {
+        var geocoder = new google.maps.Geocoder()
+        var address = document.getElementById('search-input').value
+
+        geocoder.geocode({ address: address }, function (resp, status) {
+            console.log(resp);
+            console.log(status);
+            // 緯度経度を取得
+            if (status === 'OK') {
+                // 緯度
+                var lat = resp[0].geometry.location.lat();
+                // 経度
+                var lng = resp[0].geometry.location.lng();
+
+                console.log(lat, lng);
+
+                // 地図の中央を変更する
+                map.setCenter({ lat: lat, lng: lng });
+                marker.setPosition(new google.maps.LatLng(lat, lng));
+            }
+        });
     })
-  }
 })(jQuery, window, google);

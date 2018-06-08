@@ -24,20 +24,20 @@
 
 <div class="container" style="margin-top: 50px;">
   <div class="center-align row">
-    <a class="waves-effect waves-light btn js-get-map-by-location" id="locate"><i class="material-icons left">room</i> 位置情報を取得してマップを表示する</a>
+    <a class="waves-effect waves-light btn js-get-map-by-location"><i class="material-icons left">room</i> 位置情報を取得してマップを表示する</a>
   </div>
 
   <div class="row">
     <div class="input-field col s6 offset-s3 center-align">
       <input placeholder="検索" id="search-input" type="text" class="js-get-map-by-address-target">
       <label for="search-input">検索</label>
-      <a class="waves-effect waves-light btn js-get-map-by-address" data-location="kyoto-station" id="search">検索</a>
+      <a id="search" class="waves-effect waves-light btn js-get-map-by-address" data-location="kyoto-station">検索</a>
     </div>
   </div>
 
-  <div class="center-align row" id="station">
-    <a class="waves-effect waves-light btn js-get-map-by-place" data-location="kyoto-station"><i class="material-icons left">room</i> 京都駅</a>
-    <a class="waves-effect waves-light btn js-get-map-by-place" data-location="osaka-station"><i class="material-icons left">room</i> 大阪駅</a>
+  <div class="center-align row">
+    <a id="kyoto" class="waves-effect waves-light btn js-get-map-by-place" data-location="kyoto-station"><i class="material-icons left">room</i> 京都駅</a>
+    <a id="osaka" class="waves-effect waves-light btn js-get-map-by-place" data-location="osaka-station"><i class="material-icons left">room</i> 大阪駅</a>
   </div>
 
   <div class="row">
